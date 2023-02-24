@@ -42,5 +42,6 @@ dependencies {
     compile 'com.github.open-android:BaseRecyclerAndAdapter:0.5.13'
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    compile 'com.github.open-android:LoopViewPager:2.0.0'
 
 }

@@ -1,4 +1,4 @@
-package com.example.openchina;
+package com.example.openchina.Bean;
 
 import org.itheima.recycler.bean.BasePageBean;
 
