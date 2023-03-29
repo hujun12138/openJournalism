@@ -1,11 +1,14 @@
 package com.example.openchina.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.openchina.AppConfig;
@@ -18,6 +21,7 @@ import com.itheima.retrofitutils.listener.HttpResponseListener;
 import org.itheima.recycler.L;
 import org.itheima.recycler.adapter.BaseLoadMoreRecyclerAdapter;
 import org.itheima.recycler.adapter.BaseRecyclerAdapter;
+import org.itheima.recycler.listener.ItemClickSupport;
 import org.itheima.recycler.viewholder.BaseRecyclerViewHolder;
 import org.itheima.recycler.widget.ItheimaRecyclerView;
 import org.itheima.recycler.widget.PullToLoadMoreRecyclerView;
@@ -130,6 +134,17 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (ItheimaRecyclerView) findViewById(R.id.recycler_view);
         header.attachTo(recyclerView);
         loopViewPager = (LoopViewPager) findViewById(R.id.lvp_pager);
+        ItemClickSupport itemClickSupport = new ItemClickSupport(recyclerView);
+        //点击事件
+        itemClickSupport.setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+            @Override
+            public void onItemClicked(RecyclerView recyclerView, int i, View view) {
+                int id = list.get(i).id;
+                Intent intent = new Intent(MainActivity.this,DetailActivity.class);
+                intent.putExtra("id",id);
+                startActivity(intent);
+            }
+        });
     }
 
     public static class MyRecyclerViewHolder extends BaseRecyclerViewHolder<NewsBean.ResultBean.ItemsBean> {

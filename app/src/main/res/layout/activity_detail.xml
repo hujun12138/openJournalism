@@ -1,9 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.DetailActivity">
+    <TextView
+        android:id="@+id/tv_title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="你好"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/radio_selector"
+        android:layout_marginRight="180dp"
+        android:layout_marginLeft="8dp"/>
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="你好"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"/>
+    <WebView
+        android:id="@+id/wv_new_detail_web"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp">
+    </WebView>
+    <LinearLayout
+        android:background="@drawable/radio_selector"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="24dp">
+        <TextView
+            android:id="@+id/tv_software"
+            android:text="相关软件"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lv_software"
+        android:background="@drawable/radio_selector"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lv_recommend"
+        android:background="@drawable/radio_selector"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="24dp">
+        <TextView
+            android:id="@+id/tv_recommend"
+            android:text="相关推荐"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lv_comment"
+        android:background="@drawable/radio_selector"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="24dp">
+        <TextView
+            android:id="@+id/comment"
+            android:text="评论"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+</LinearLayout>
